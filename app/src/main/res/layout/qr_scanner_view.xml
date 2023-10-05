@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    tools:context=".qrcode.QRScanner"
+    android:layout_width="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/colorMeasurement">
+
+            <Button
+                android:id="@+id/returntolist"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                app:icon="@drawable/arrow_back_icon"
+                android:scaleType="centerInside"
+                android:background="@android:color/transparent"
+                />
+
+            <TextView
+                android:id="@+id/header_qrcode"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="QR-Code Scanner"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:layout_toEndOf="@id/returntolist"
+                android:layout_centerVertical="true"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="55dp"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/cameraBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorBrightGray"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:text="Camera"
+                app:icon="@drawable/camera_icon"
+                app:iconGravity="textStart"
+                app:iconSize="30dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageIv"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:padding="15dp"
+            android:adjustViewBounds="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/testo_icon" />
+
+        <Button
+            android:id="@+id/scanBtn"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/colorBrightGray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan"
+            app:icon="@drawable/qrcode_icon"
+            app:iconGravity="textStart"
+            app:iconSize="30dp" />
+
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Result:"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:padding="5dp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/resultTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:paddingLeft="5dp"
+            />
+
+
+    </LinearLayout>
+
+</ScrollView>
